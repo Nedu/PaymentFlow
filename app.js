@@ -5,7 +5,11 @@ const expressHandlebars = require('express-handlebars');
 
 const app = express();
 
+/* Middlewares */
 
+// Handlebars Middleware
+app.engine('handlebars', expressHandlebars({defaultLayout: 'main'}));
+app.set('view engine', 'handlebars');
 
 // Index Route
 app.get('/', (req, res) => {
