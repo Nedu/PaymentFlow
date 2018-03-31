@@ -5,6 +5,13 @@ const expressHandlebars = require('express-handlebars');
 
 const app = express();
 
+
+
+// Index Route
+app.get('/', (req, res) => {
+    res.render('index');
+});
+
 const port = process.env.PORT || 5000;
 
 app.listen(port, () => {
