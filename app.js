@@ -11,6 +11,10 @@ const app = express();
 app.engine('handlebars', expressHandlebars({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
+// BodyParser Middleware
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended:false}));
+
 // Index Route
 app.get('/', (req, res) => {
     res.render('index');
