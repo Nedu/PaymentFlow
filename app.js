@@ -15,6 +15,9 @@ app.set('view engine', 'handlebars');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:false}));
 
+// Setup Static Folder
+app.use(express.static(`${__dirname}/public`));
+
 // Index Route
 app.get('/', (req, res) => {
     res.render('index');
