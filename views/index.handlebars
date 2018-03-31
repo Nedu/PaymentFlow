@@ -1,0 +1,19 @@
+<section class="py-2">
+    <div class="row">
+        <div class="col-md-6 text-center">
+            <form action="/charge" method="POST">
+                <script 
+                src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="pk_test_gT7H4erlNxPMj3juwPMgS4yj" data-amount="2500" 
+                data-name="Adventure Corp Product" 
+                data-description="Adventure Corp Product" data-image="https://stripe.com/img/documentation/checkout/marketplace.png" 
+                data-locale="auto">
+                </script>
+                <script>
+                    // Hide the default stripe button
+                    document.getElementsByClassName('stripe-button-el')[0].style.display = 'none';
+                </script>
+                <button type="submit" class="btn btn-dark text-white btn-lg">Purchase For $25</button>
+            </form>
+        </div>
+    </div>
+</section>
